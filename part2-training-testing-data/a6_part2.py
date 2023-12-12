@@ -9,7 +9,7 @@ from sklearn.model_selection import train_test_split
 '''
 
 # Load the dataset
-data = pd.read_csv("part2-training-testing-data/chirping_data.csv")
+data = pd.read_csv("part2-training-testing-data/blood_pressure_data.csv")
 
 # Extract the features (independent variable) and target (dependent variable)
 x = data["Age"].values
@@ -58,14 +58,4 @@ for i in range(len(xtest)):
 **********CREATE A VISUAL OF THE RESULTS**********
 '''
 
-# Create a scatter plot of the test data points
-plt.scatter(xtest, ytest, label="Actual Data Points")
 
-# Plot the line of best fit using the model's predictions
-plt.plot(xtest, predictions, color='red', label="Line of Best Fit")
-
-plt.xlabel("Age")
-plt.ylabel("Blood Pressure")
-plt.title("Linear Regression: Age vs. Blood Pressure")
-plt.legend()
-plt.show()
