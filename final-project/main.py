@@ -12,8 +12,8 @@ x = data[["temp", "traffic_volume"]]
 # Standardize the data
 x_std = StandardScaler().fit_transform(x)
 
-# The value of k has been defined for you
-k = 3  # Adjust the number of clusters as needed
+# Number of clusters
+k = 1  
 
 # Apply the KMeans algorithm
 km = KMeans(n_clusters=k).fit(x_std)
